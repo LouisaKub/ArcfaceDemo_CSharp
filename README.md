@@ -2,7 +2,7 @@
 
 	1.	安装VS2012环境安装包(vcredist_x86_vs2012.exe)、VS2013环境安装包（vcredist_x86_vs2013.exe）
 	
-	2.	从官网申请sdk  http://www.arcsoft.com.cn/ai/arcface.html  ，下载对应的sdk版本(x86或x64)并解压
+	2.	从官网申请sdk# http://www.arcsoft.com.cn/ai/arcface.html  ，下载对应的sdk版本(x86或x64)并解压
 	
 	3.	将libs中的“libarcsoft_face.dll”、“libarcsoft_face_engine.dll”拷贝到工程bin目录的对应平台的debug或release目录下
 	
@@ -47,7 +47,7 @@
 		.Net平台设置的默认堆栈大小为256KB，SDK中需要的大小为512KB以上，推荐调整堆栈的方法为：
 		new Thread(new ThreadStart(delegate {
 			ASF_MultiFaceInfo multiFaceInfo = FaceUtil.DetectFace(pEngine, imageInfo);
-		}), 1024 * 512).Start();
+		}), 1024 # 512).Start();
 		
 	8.X86模式下批量注册人脸有内存溢出或图片空指针	
 		请增加虚拟内存或每次批量注册人脸控制在20张图片范围内
@@ -56,3 +56,4 @@
 		(1)请调整detectFaceScaleVal的值；
 		(2)请确认图片的宽度是否为4的倍数；
 		(3)请确认图片是否通过ImageUtil.ReadBMP方法进行数据调整。
+ 
